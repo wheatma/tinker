@@ -1,0 +1,50 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">手机归属地查询</view>
+        <view class="page__desc"></view>
+    </view>
+    <view class="page__bd">
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindchange="inputChange" data-type="phone" placeholder="请输入手机号" value="{{phone}}"/>
+                </view>
+            </view> 
+        </view>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="query">查询</button>
+        </view>
+
+        <view class="weui-cells ">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">省份</view>
+                <view class="weui-cell__ft">{{info.province}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">城市</view>
+                <view class="weui-cell__ft">{{info.city}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">区号</view>
+                <view class="weui-cell__ft">{{info.areacode}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">邮编</view>
+                <view class="weui-cell__ft">{{info.zip}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">运营商</view>
+                <view class="weui-cell__ft">{{info.company}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">卡类型</view>
+                <view class="weui-cell__ft">{{info.card}}</view>
+            </view>
+        </view>
+    </view>
+</view>
